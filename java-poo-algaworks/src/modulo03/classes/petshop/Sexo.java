@@ -1,7 +1,7 @@
 package modulo03.classes.petshop;
 
 public enum Sexo {
-	 MACHO("macho"), FEMEA("fêmea");	
+	 MACHO("macho"), FEMEA("femea");	
 	
 	 private Sexo(String sexo) {
 		this.sexo = sexo;

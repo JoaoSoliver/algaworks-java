@@ -5,13 +5,13 @@ import java.util.Date;
 
 /*
  * Um pet shop te chamou para ajudar no controle dos animais que eles cuidam. 
- * Eles irão precisar de muitos serviços, o primeiro é mapear qual o nome, raça, sexo (macho ou fêmea) e idade.
+ * Eles irï¿½o precisar de muitos serviï¿½os, o primeiro ï¿½ mapear qual o nome, raï¿½a, sexo (macho ou fï¿½mea) e idade.
  */
 
 public class Cachorro {
 	
 	private String nome;
-	private String raça; 
+	private String raca; 
 	private Sexo sexo; 
 	private int idade;
 	private Date idadeAnimal;
@@ -21,9 +21,9 @@ public class Cachorro {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Cachorro(String nome, String raça, Sexo sexo, int idade) {
+	public Cachorro(String nome, String raca, Sexo sexo, int idade) {
 		this.nome = nome;
-		this.raça = raça;
+		this.raca = raca;
 		this.sexo = sexo;
 		this.idade = idade;
 	}
@@ -31,7 +31,7 @@ public class Cachorro {
 	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	@Override
 	public String toString() {
-		return "Cachorro [nome=" + nome + ", raça=" + raça + ", sexo=" + sexo.getSexo() + ", idade=" + idade + ", idadeAnimal="
+		return "Cachorro [nome=" + nome + ", raça=" + raca + ", sexo=" + sexo.getSexo() + ", idade=" + idade + ", idadeAnimal="
 				+ sdf.format(idadeAnimal) + "]";
 	}
 	
@@ -43,12 +43,12 @@ public class Cachorro {
 		this.nome = nome;
 	}
 
-	public String getRaça() {
-		return raça;
+	public String getRaca() {
+		return raca;
 	}
 
-	public void setRaça(String raça) {
-		this.raça = raça;
+	public void setRaca(String raca) {
+		this.raca = raca;
 	}
 
 	public Sexo getSexo() {
