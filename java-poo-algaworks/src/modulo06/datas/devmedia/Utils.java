@@ -9,7 +9,25 @@ import java.util.GregorianCalendar;
 
 public class Utils {
 	
-	public static int calculaIdade(String dataDeNascimento, String pattern) {
+	public int calculaIdade(java.util.Date dataNascimento) {
+		
+		Calendar dataAniversario = new GregorianCalendar();
+		dataAniversario.setTime(dataNascimento);
+		
+		Calendar hoje = Calendar.getInstance();
+		
+		int idade = hoje.get(Calendar.YEAR) - dataAniversario.get(Calendar.YEAR);
+		
+		dataAniversario.add(Calendar.YEAR, idade);
+		
+		if(hoje.before(dataAniversario)) {
+			idade--;
+		}
+		
+		return idade;
+	}
+	
+	public int calculaIdade(String dataDeNascimento, String pattern) {
 		
 		DateFormat sdf = new SimpleDateFormat(pattern);
 		Date dataNascimentoInput = null;
@@ -17,8 +35,7 @@ public class Utils {
 		try {
 			dataNascimentoInput = sdf.parse(dataDeNascimento);
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			System.out.println("[ " + dataDeNascimento + " ]" + " - Data inválida");;
+			System.out.println("[ " + dataDeNascimento + " ]" + " - Data inválida");
 		}
 		
 		Calendar dateOfBirth = new GregorianCalendar();

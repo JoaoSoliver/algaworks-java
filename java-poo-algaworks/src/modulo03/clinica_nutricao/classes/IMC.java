@@ -1,4 +1,4 @@
-package modulo03.classes.clinica_nutricao;
+package modulo03.clinica_nutricao.classes;
 
 public class IMC {
 	
